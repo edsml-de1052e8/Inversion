@@ -23,4 +23,16 @@ Do that by looking at derivative, finding stationary points with extra criterias
 Note that optimisation problems can be turned into inversion problems.
 
 
+even for matrices that arent square, can defined rank of matrix both ways ( both through linearly independent rows and columns).
+Linearly independent rows for example mean that it doesn't depend on previous rows eg. sum of 2 rows gives the 3rd row this would be linearly dependent.
+
+In the case of a non-sqaure matrix with for example more columns than rows, we still have less constraints (still solutions left) than the degrees of freedom (DF on the right)
+
+Uniquess: number of rank equals n (number of columns ?)
+Can also expect solution to be unique if there are no non-trivial nodes.
+
+
+
+
+
 
