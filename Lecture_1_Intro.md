@@ -1,5 +1,8 @@
-# Lecture 1: Inversion and Optimisation
+# Lecture 1: Inversion and Optimisation 
+*(28/02/22)*
 
+Here m = linear equations
+n = degrees of freedom
 
 General reminder:
 
@@ -28,11 +31,11 @@ Linearly independent rows for example mean that it doesn't depend on previous ro
 
 In the case of a non-sqaure matrix with for example more columns than rows, we still have less constraints (still solutions left) than the degrees of freedom (DF on the right)
 
-Uniquess: number of rank equals n (number of columns ?)
+Uniquess: number of rank equals n (degrees of freedom n ((or number of columns ?)))
 Can also expect solution to be unique if there are no non-trivial nodes.
 
 
-
-
+- Mixed determined: can also be thought of as rank-deficient. Uniquiness and existence are both not guaranteed. Also means solutions are not unique. 
+- Row Echelon Form: row operations on matrix to see if it is rank efficient.
 
 
