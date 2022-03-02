@@ -18,3 +18,5 @@ Conjuate gradient method performs well on stationary methods, can combine them.
 Combining steepest descent to stationary method means you're applying steepest descent to slightly modified equation, needs to be able to have an inverse(?)
 
 **Pre-conditioning:** effective combination with stationary methods, good for cases when condition numbers increase with system height. Can therefore reduce iterations by a lot. 
+
+NB: All these work on SPDs!
