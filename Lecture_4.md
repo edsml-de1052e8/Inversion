@@ -49,6 +49,32 @@ Banach Fixed Point Theorem(?): the absolute value of a derivative G(x) should be
 Chord Method: evaluates the function f and introduces a term m which controls the iterations in the Picard. Different values of m give you different slopes.
 
 
+**Newton's method in multiple dimensions**
+
+In 1D the strong point of this method is that: assumin we're close enugh to the statioanry point the method will converge quadratically to it (local convergence). Same holds for Newton's method in multiple dimensions. 
+
+Assumes that F is differentiable and that its derivative is Lipschitz continuous.
+
+Local convergence: the method doesn't tell you how close you are or how far, just that you are within range to the stationary point. 
+For a lot of initial guesses, Newton might not even converge. -> remedy that with line search methods
+
+
+Steps include:
+- Evaluate F(x)
+- evalueate F'(x)
+- solve F'(x)p = -F(x)
+- Update x(i+1) = x(i) + p
+
+
+**Line Search Method**
+
+When initial guess is too far oof to the stationary point. 
+
+Condition: p is in the direction of the function f & the direction where it descends the most, called descent direction.
+
+
+
+
 
 
 
