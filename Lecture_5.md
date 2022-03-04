@@ -17,4 +17,32 @@ As a result you get the matrix formed of sum of two parts, by adding the Hassian
 
 
 
+**Quasi-Newton Method**
+
+
+Dennis-More theorem is an important result for quasi-Newton methods
+
+- Newton-Gauss: good for nonlinear least squares problems. Find solution that best fits the equation and do that by minimising R.
+We want to find the x that minimises the 2-norm of the residual R(x). 
+R is a vector, first derivative is a matrix, second derivative has 3 indices. (?)
+
+NB: you are not doing a standard matrix x vector multiplication first, to get it to that form you need to first take the transpose then derivate it. 
+
+Non-linear regression: fit a curve G that depends on n model parameters x1. 
+
+
+NB: With linear regression there is no difference between Gauss-Newton and full Newton.
+Pluck that in, solve for x (the model paramter) in 0.5 Y transpose Y.
+
+Semi definite is not enough to guarantee convergence of the Newton method. 
+
+Dampened Gaussian, cheaper combination to do. 
+
+
+
+
+
+
+
+
 
