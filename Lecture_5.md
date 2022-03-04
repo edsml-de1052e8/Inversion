@@ -40,9 +40,20 @@ Dampened Gaussian, cheaper combination to do.
 
 
 
+**Quasi Newton Secant method**
+Quasi Newton secant only works in 1D for this case.
+
+Retain info about the derivative in other directions from previous iterations and build up the approximate Jacobian B i iteratively. 
+First approximation is the identity matrix. 
+
+Because all the columns become linearly dependent, the rank is of 1. 
+Secant equation becomes: B(i) s = y
+
+BFGS: makes sure that the outcome is symmetric positive definite even when the hassian isn't. 
 
 
 
+The Quasi Newton Secant is useful to deal with computationally expensive Jacobian matrices. It uses less memory space.
 
 
 
