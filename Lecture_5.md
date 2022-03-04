@@ -53,7 +53,17 @@ BFGS: makes sure that the outcome is symmetric positive definite even when the h
 
 
 
-The Quasi Newton Secant is useful to deal with computationally expensive Jacobian matrices. It uses less memory space.
+The Quasi Newton Secant is useful to deal with computationally expensive Jacobian matrices. It uses less memory space. Also because the real Hassian may have been changed quite a lot 
+
+
+
+
+
+
+
+
+
+
 
 
 
