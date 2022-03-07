@@ -24,7 +24,7 @@ Impportant to test that the derivative function is correct using a Taylor test.
 let's treat our computer program as a mathematical function that takes a number of input values gathered together in a vector and returns a value. Then if is the derivative of this function - this implies that f is actually differentiable as a mathematical function - then by Taylor's theorem we may write.
 Need a small enough h so that we get an assymptotic behaviour that is clear.
 
-
+-> Do a Taylor test in the assessment to test derivative accuracy
 
 
 
