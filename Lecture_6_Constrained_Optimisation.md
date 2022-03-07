@@ -14,7 +14,18 @@ In such situations, a lot of these scaling issues with a stopping criterion base
 NB: when an iteration it doesn't always mean that the answer is necesserily *good*. If using a library using a stalling criteria, check the code and check the stopping critieria.
 
 
-Newton-CG method (and indeed all conjugate gradient methods) only works on SPD matrices, need to make sure the Hessian is spd (?) so can detect indefiniteness if the inner product p, Ap becomes 0 or negative.
+Newton-CG method (and indeed all conjugate gradient methods) only works on SPD matrices, need to make sure the Hessian is spd (?) so can detect indefiniteness if the inner product p, Ap becomes 0 or negative and add that as a condition in the function.
+
+If we have an indefenite matrix (p=0, we can do steepest decent instead with p = -Fx
+
+
+Impportant to test that the derivative function is correct using a Taylor test. 
+
+let's treat our computer program as a mathematical function that takes a number of input values gathered together in a vector and returns a value. Then if is the derivative of this function - this implies that f is actually differentiable as a mathematical function - then by Taylor's theorem we may write.
+Need a small enough h so that we get an assymptotic behaviour that is clear.
+
+
+
 
 
 
