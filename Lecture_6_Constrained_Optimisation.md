@@ -28,5 +28,18 @@ Need a small enough h so that we get an assymptotic behaviour that is clear.
 
 
 
+**Convex Functions and the Hessian**
+
+- Any local min of a convex function is a global minimum. If the function is strictly convex when global min is attained in a single point.
+
+- 
+
+
+
+
+
+
+
+
 
 
