@@ -38,10 +38,31 @@ General idea: we can derive a continous equation for the adjoint variable.
 
 **Solving the discrete model backwards**
 
+**Adjoint Equation**
+
+To find the stationary points of lagragian L we simply write down its partial derivatives and set those to zero
 
 
 
+**Checkpointing**
 
+Although adjoint equation is linear it depnds on the forward solutionu so we need access to it entirely in all timesteps. But that is very memory expensive if you need to store all these for all timesteps. A trick them is to write a few intermediate results, called **checkpoints** at specified intervals. Then you can pick up from and recompute from the nearest intermediate timestep. 
+
+
+### Summary of Methods 🗒 
+
+Although we have outlined a procedure to solve PDE-constrained optimisation problems using the adjoint method, there are still a few important choices we have to make when implementing this method. We distinguuish between two approaches: 
+
+**The continuous adjoint approach**: starts with a continuous formulation of the PDE-constrained optimisation, i.e. we simply write down what PDE we want to solve, which we will call the *forward* PDE, without specifying which discretisation is going to be used. The adjoint equation then produces a second PDE, the *adjoint* or *backward* PDE that solves for . 
+
+We now need to implement a discretisation for both the forward and the backward PDE. Luckily in many cases, the backward PDE is closely related to the forward PDE, so the code used to solve the forward PDE numerically, can be adapted to be able to also solve the backward problem. Fpr complicated nonlinear PDEs, the relations between the forward and the backward model is not always that straightforward however. 
+
+NB: Issues with discretisation errors: the derivative that you end up with in the end is not exactly the same as the discrete derivative that we would get otherwise. This may also lead to convergence errors.
+
+
+**In the discontinuous (or discrete) adjoint approach**: the discretisation of the forward PDE is already chosen beforehand. This leads to a discrete PDE-constrained optimisation problem. 
+
+The procedure to solve lambda for  is to take the adjoint of the forward *discrete* model, and requires taking derivatives of that code (see next section), which can be a complicated procedure. The main advantage of the discontinuous approach is that it produces the exact (except for details such as solver tolerances, machine precision, etc.) derivative of the discrete model that is used to evaluate the reduced functional for a given m . In the continuous approach, when we hook up our final implementation to the optimisation algorithm, we also use a discrete model to calculate the reduced functional values. This is however just a *numerical approximation* to the underlying continuous PDE, which introduces numerical error between the two. In the continuous adjoint method for calculating the derivative we again introduce numerical error, by discretising the adjoint PDE. Thus the gradient information that the optimisation algorithm receives is a numerical approximation of the procedure to compute the functional values.
 
 
 
