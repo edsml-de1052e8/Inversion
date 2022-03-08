@@ -28,3 +28,13 @@ The meaning of this tangent linear equation is easiest to understand for the cas
 The tangent linear equation above provides a PDE that can be solved to obtain du/dm. This PDE is a modification of the original PDE. In particular, even if the original PDE is nonlinear the PDE described by (tangent-linear-equation) is linear.
 
 
+
+
+
+
+
+
+
+
+
+
