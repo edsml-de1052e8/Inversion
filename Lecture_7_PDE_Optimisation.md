@@ -36,6 +36,8 @@ General idea: we can derive a continous equation for the adjoint variable.
 
 
 
+**Solving the discrete model backwards**
+
 
 
 
