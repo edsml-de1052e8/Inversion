@@ -18,3 +18,22 @@ CSPRNG (cryptographically secure random number generator)
 - Middling cost to implement
 
 Most of data is real number. 
+
+
+### Data Assimilation
+
+BLUE: Bets Linear Unbiased Estimator
+
+- Estimator: fixed guess at statistical quantity
+- Unbiased:: error has zero mean 
+- Linear Tguess = alpha * T1 + alphaT2
+
+y: observation
+x: model data
+
+
+
+
+
+
+
