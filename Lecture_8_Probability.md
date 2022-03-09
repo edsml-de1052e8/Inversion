@@ -32,7 +32,7 @@ y: observation
 x: model data
 
 
-
+Can also extent Kalman filter to the non-linear case by linearizing it. 
 
 
 
